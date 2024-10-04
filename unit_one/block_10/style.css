@@ -34,10 +34,24 @@ li:nth-child(odd) {
   background-color: thistle;
 }
 
-a:hover{
-    background-color: crimson;
+a:hover {
+  background-color: crimson;
 }
 
+.imgOne {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  z-index: 4;
+}
+
+.imgTwo {
+  position: absolute;
+  top: 0;
+  margin: 25px;
+  width: 100px;
+  z-index: 2;
+}
 
 @media screen and (max-width: 880px) {
   .blue {
