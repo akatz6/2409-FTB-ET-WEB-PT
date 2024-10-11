@@ -51,8 +51,7 @@ h1 {
 
 img {
   height: 200px;
-  margin: 30px;
-  border: 10px dotted dodgerblue;
+  border: 10px dotted dodgerblue
 }
 
 .divSections {
@@ -61,4 +60,11 @@ img {
 
 .bigText {
   font-size: 30px;
+}
+
+.doggy{
+    margin: 0 auto;
+    width: 40%;
+    padding: 30px;
+    background-color: red;
 }
