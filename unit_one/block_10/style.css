@@ -1,0 +1,65 @@
+body {
+  width: 80%;
+  margin: 10vh auto !important;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.2mg04atUJsQJr6goN9zVvwHaEn%26pid%3DApi&f=1&ipt=e36113236d5bf210f538777ca80f58700973c587d7bcd94794fc36482c25bf60&ipo=images");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.divParent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.div {
+  height: 100px;
+  width: 100px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+li:nth-child(odd) {
+  background-color: thistle;
+}
+
+a:hover {
+  background-color: crimson;
+}
+
+.imgOne {
+  position: absolute;
+  top: 0;
+  width: 300px;
+
+}
+
+.imgTwo {
+  position: absolute;
+  top: 0;
+  margin: 25px;
+  width: 100px;
+}
+
+@media screen and (max-width: 880px) {
+  .blue {
+    background-color: yellow;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .red {
+    background-color: yellow;
+  }
+}

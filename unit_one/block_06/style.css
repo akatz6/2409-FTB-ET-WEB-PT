@@ -1,0 +1,70 @@
+h1 {
+  background-color: pink;
+  color: blueviolet;
+}
+
+.divOne {
+  background-color: red;
+  height: 100px;
+  width: 500px;
+  margin: 20px 30px 50px 70px;
+}
+
+.divTwo {
+  background-color: green;
+  height: 100px;
+  width: 80%;
+}
+
+.divThree {
+  background-color: yellow;
+  height: 30vh;
+  width: 90vw;
+  border: 20px dotted green;
+}
+
+.a {
+  list-style-type: circle;
+}
+
+.b {
+  list-style-type: square;
+}
+
+.c {
+  list-style-type: upper-roman;
+}
+
+.d {
+  list-style-type: lower-alpha;
+}
+
+.divA {
+  background-color: purple;
+}
+
+.mySection {
+  margin: 0 auto;
+  width: 45%;
+  background-color: teal;
+}
+
+img {
+  height: 200px;
+  border: 10px dotted dodgerblue
+}
+
+.divSections {
+  display: flex;
+}
+
+.bigText {
+  font-size: 30px;
+}
+
+.doggy{
+    margin: 0 auto;
+    width: 40%;
+    padding: 30px;
+    background-color: red;
+}
