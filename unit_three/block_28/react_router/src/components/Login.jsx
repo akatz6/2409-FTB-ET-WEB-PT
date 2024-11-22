@@ -20,18 +20,22 @@ export default function Login() {
         email: form.email,
         password: form.password,
       });
-      console.log(data);
-      localStorage.setItem("token", data.token);
-      navigate("/users");
-      //   const response = await fetch("http://localhost:3000/api/register", {
+
+      // const response = await fetch("http://localhost:3000/api/register", {
       //     method: "Post",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
       //     body: JSON.stringify({
       //       email: form.email,
       //       password: form.password,
       //     }),
       //   });
       //   const data = await response.json();
-      //   console.log(data);
+
+      console.log(data);
+      localStorage.setItem("token", data.token);
+      navigate("/users");
     } catch (error) {
       console.error(error);
     }
