@@ -1,0 +1,81 @@
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useRegisterMutation } from "./RegisterSlice";
+
+export default function Register() {
+  const [form, setForm] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
+  const [registerUser] = useRegisterMutation();
+
+  const change = (e) => {
+    setForm((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      // const { data } = await axios.post("http://localhost:3000/api/register", {
+      //   email: form.email,
+      //   password: form.password,
+      // });
+
+      // const response = await fetch("http://localhost:3000/api/register", {
+      //     method: "Post",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //       email: form.email,
+      //       password: form.password,
+      //     }),
+      //   });
+      //   const data = await response.json();
+
+      const response = await registerUser(form).unwrap();
+      console.log(response);
+
+      // console.log(data);
+      // localStorage.setItem("token", data.token);
+      navigate("/users");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <div>
+      <form onSubmit={submit}>
+        <div className="form-group">
+          <label>Email address</label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            name="email"
+            onChange={change}
+          />
+        </div>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            name="password"
+            onChange={change}
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
