@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Register from "./components/Register/Register";
 import Lost from "./components/Lost";
-import User from "./components/User";
+import User from "./components/User/User";
 import Users from "./components/Users/Users";
 
 function App() {
