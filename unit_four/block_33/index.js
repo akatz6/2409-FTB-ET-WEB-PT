@@ -13,8 +13,8 @@ app.listen(PORT, async () => {
 app.get("/", async (req, res, next) => {
   try {
     const SQL = `
-      SELECT * from genre
-      INNER JOIN movies on movies.genre_id  = genre.id
+      SELECT movies.id, movies.genre_id, genre.type, movies.name from movies
+      INNER JOIN genre on movies.genre_id  = genre.id
     `;
     const response = await client.query(SQL);
     res.status(200).send(response.rows);
